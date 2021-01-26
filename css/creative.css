@@ -215,6 +215,11 @@ header.masthead p {
   .toppic-start {
     content: url("../img/Gruene_transparent-184a.png");
   }
+  @media (max-height: 900px) {
+    header.masthead .container {
+      margin-top: 5rem!important;
+    }
+  }
 }
 
 @media (min-width: 1200px) {

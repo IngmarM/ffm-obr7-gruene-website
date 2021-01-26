@@ -66,6 +66,7 @@
     type: 'image',
     tLoading: 'Loading image #%curr%...',
     mainClass: 'mfp-img-mobile',
+    closeOnContentClick : true,
     gallery: {
       enabled: true,
       navigateByImgClick: true,
