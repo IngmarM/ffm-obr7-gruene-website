@@ -194,6 +194,9 @@ header.masthead p {
   p {
     font-size: 0.9rem;
   }
+  .candidates-description {
+    visibility: hidden;
+  }
 }
 
 @media (min-width: 768px) {
@@ -357,6 +360,12 @@ header.masthead p {
   font-size: 12px;
   text-align: right;
   font-weight: lighter;
+}
+
+.youtube-link {
+  position: absolute;
+  top: 70%; left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 @media (min-width: 992px) {
