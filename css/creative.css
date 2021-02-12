@@ -115,7 +115,7 @@ img::-moz-selection {
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #fff;
-  font-family: "PT Sans", "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "PT Sans Bold", "Open Sans", "Helvetica Neue", Arial, sans-serif;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -136,7 +136,7 @@ img::-moz-selection {
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 100;
   text-transform: uppercase;
   color: #212529;
 }
@@ -197,6 +197,7 @@ header.masthead p {
   .candidates-description {
     visibility: hidden;
   }
+
 }
 
 @media (min-width: 768px) {
@@ -218,9 +219,23 @@ header.masthead p {
   .toppic-start {
     content: url("../img/Gruene_transparent-184a.png");
   }
-  @media (max-height: 900px) {
+  @media (max-height: 950px) {
     header.masthead .container {
       margin-top: 5rem!important;
+    }
+  }
+  @media (max-height: 850px) {
+    header.masthead h1 {
+      font-size: 2rem!important;
+    }
+    header.masthead h3 {
+      font-size: 1rem!important;
+    }
+    header.masthead img {
+      width: 70%!important;
+    }
+    .candidates-description {
+      visibility: hidden;
     }
   }
 }
@@ -368,6 +383,89 @@ header.masthead p {
   transform: translate(-50%,-50%);
 }
 
+.circular-portrait {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular-portrait img {
+  width: 100%;
+  height: auto;
+}
+
+.sprechblase {
+	position: relative;
+	background: #ffffff;
+  border: 2px solid #27533b;
+  padding: 20px;
+  margin-left: 0px;
+  -webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+}
+.sprechblase:after, .sprechblase:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.sprechblase:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+	border-width: 10px;
+	margin-top: -10px;
+}
+.sprechblase:before {
+	border-color: rgba(19, 107, 13, 0);
+	border-right-color: #27533b;
+	border-width: 13px;
+	margin-top: -13px;
+}
+@media (max-width: 767px) {
+  .sprechblase {
+    position: relative;
+    padding: 1rem;
+    font-family: helvetica, tahoma;
+    border: 2px solid #27533b;
+    margin:0 auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-align: center;
+    background: #ffffff;}
+    
+    .sprechblase:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: -17px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 17px solid #27533b; }
+    
+    .sprechblase:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 51%;
+    top: -10px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 15px solid #ffffff;}
+}
+
+
 @media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
@@ -385,11 +483,12 @@ header.masthead p {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
-    color: rgba(255, 255, 255, 0.7);
+    color: #fff;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-    color: #fff;
+    color: #ffe000;
+    font-weight:300!important;
   }
   #mainNav.navbar-shrink {
     border-bottom: 1px solid rgba(33, 37, 41, 0.1);
@@ -409,5 +508,11 @@ header.masthead p {
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
     color: #27533b;
+  }
+  .infostand {
+    color:#ffe000;
+    border-top: solid #ffe000 2px;
+    border-bottom: solid #ffe000 2px;
+    font-weight:100!important;
   }
 }
